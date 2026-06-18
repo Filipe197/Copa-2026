@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Completo de Figurinhas Copa 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --verde: #006633;
+    --verde-claro: #00A550;
+    --verde-neon: #00D968;
+    --amarelo: #FFDF00;
+    --amarelo-queimado: #C8A800;
+    --azul-escuro: #00264D;
+    --azul: #003580;
+    --creme: #FFF8E7;
+    --cinza: #F5F5F0;
+    --texto: #1A1A1A;
+    --texto-muted: #555;
+    --branco: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--azul-escuro);
+    color: var(--texto);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #00264D 0%, #003580 40%, #004D00 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 80px 24px 60px;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 80%, rgba(0,217,104,0.12) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(255,223,0,0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--amarelo);
+    color: var(--azul-escuro);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 10vw, 100px);
+    line-height: 0.9;
+    color: var(--branco);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 span {
+    color: var(--amarelo);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.75);
+    margin: 20px auto 0;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat strong {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--verde-neon);
+    display: block;
+    line-height: 1;
+  }
+
+  .hero-stat span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero-scroll {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero-scroll::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 24px; }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--verde-neon);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1;
+    color: var(--branco);
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    max-width: 580px;
+  }
+
+  /* ── O QUE TEM NO PDF ── */
+  .conteudo-section {
+    background: #071825;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .card-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .card-item:hover {
+    border-color: rgba(0,217,104,0.3);
+    background: rgba(0,217,104,0.04);
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(0,217,104,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .card-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--branco);
+    margin-bottom: 8px;
+  }
+
+  .card-item p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  /* ── PREVIEW ── */
+  .preview-section {
+    background: #04101A;
+  }
+
+  .preview-mockup {
+    margin-top: 48px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .mockup-header {
+    background: rgba(255,255,255,0.05);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; }
+  .dot-y { background: #febc2e; }
+  .dot-g { background: #28c840; }
+
+  .mockup-body {
+    padding: 32px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .mockup-body { grid-template-columns: 1fr; }
+  }
+
+  .sticker-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .sticker-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+
+  .sticker-bg-verde { background: linear-gradient(135deg, #006633, #00A550); }
+  .sticker-bg-azul  { background: linear-gradient(135deg, #003580, #1565C0); }
+  .sticker-bg-amarelo { background: linear-gradient(135deg, #C8A800, #FFD700); }
+  .sticker-bg-vermelho { background: linear-gradient(135deg, #8B0000, #C0392B); }
+
+  .sticker-body {
+    padding: 14px 16px;
+  }
+
+  .sticker-num {
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .sticker-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--branco);
+    margin-top: 2px;
+  }
+
+  .sticker-info {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  .sticker-tag {
+    display: inline-block;
+    background: rgba(0,217,104,0.15);
+    color: var(--verde-neon);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 100px;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .sticker-tag.rara { background: rgba(255,223,0,0.15); color: var(--amarelo); }
+  .sticker-tag.lendaria { background: rgba(200,0,0,0.15); color: #FF6B6B; }
+
+  /* ── PARA QUEM ── */
+  .paraquem-section { background: #071825; }
+
+  .perfis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .perfil {
+    text-align: center;
+    padding: 32px 20px;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .perfil-emoji {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .perfil h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--branco);
+    margin-bottom: 6px;
+  }
+
+  .perfil p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.5;
+  }
+
+  /* ── CTA PRINCIPAL ── */
+  .cta-section {
+    background: linear-gradient(160deg, #004D00 0%, #003580 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,223,0,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .price-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 40px 60px;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .price-original {
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: line-through;
+  }
+
+  .price-main {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    color: var(--amarelo);
+    line-height: 1;
+  }
+
+  .price-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  .badge-desconto {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    background: #FF4444;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--amarelo);
+    color: var(--azul-escuro);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 56px;
+    border-radius: 100px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(255,223,0,0.35);
+  }
+
+  .cta-garantia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.45);
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .cta-extras {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .extra-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .extra-item span {
+    font-size: 18px;
+  }
+
+  /* ── FAQ ── */
+  .faq-section { background: #04101A; }
+
+  .faq-list {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 20px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--branco);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 20px;
+    color: var(--verde-neon);
+    font-weight: 400;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  .faq-a-inner { padding: 0 24px 20px; }
+
+  .faq-item.open .faq-a { max-height: 200px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #020D14;
+    padding: 40px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.25);
+    line-height: 1.8;
+  }
+
+  footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+  footer a:hover { color: var(--verde-neon); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero-stats { gap: 24px; }
+    .price-box { padding: 32px 32px; }
+    .price-main { font-size: 60px; }
+    .cta-btn { padding: 18px 36px; font-size: 16px; }
+    .cta-extras { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">⚽ Copa do Mundo 2026 — EUA · México · Canadá</div>
+  <div class="container">
+    <h1>Guia Completo<span>das Figurinhas</span></h1>
+    <p class="hero-sub">O PDF definitivo com todas as cartas do álbum oficial Panini — jogadores, seleções, escudos, estádios e figurinhas especiais brilhantes.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>800+</strong>
+        <span>Figurinhas</span>
+      </div>
+      <div class="hero-stat">
+        <strong>48</strong>
+        <span>Seleções</span>
+      </div>
+      <div class="hero-stat">
+        <strong>16</strong>
+        <span>Estádios</span>
+      </div>
+      <div class="hero-stat">
+        <strong>PDF</strong>
+        <span>Acesso imediato</span>
+      </div>
+    </div>
+    <div class="hero-scroll">role para ver</div>
+  </div>
+</section>
+
+<!-- O QUE TEM NO PDF -->
+<section class="conteudo-section">
+  <div class="container">
+    <div class="section-label">Conteúdo do PDF</div>
+    <h2 class="section-title">Tudo que você precisa saber sobre o álbum</h2>
+    <p class="section-desc">Organizado e indexado para você encontrar qualquer figurinha em segundos.</p>
+
+    <div class="cards-grid">
+      <div class="card-item">
+        <div class="card-icon">🌎</div>
+        <h3>Todas as 48 seleções</h3>
+        <p>Elencos completos de cada país classificado, com posição e número da figurinha no álbum.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon">⭐</div>
+        <h3>Figurinhas brilhantes</h3>
+        <p>Lista completa das cartas especiais foil e brilhantes, as mais raras e valiosas do álbum.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon">🏟️</div>
+        <h3>Estádios e sedes</h3>
+        <p>Os 16 estádios dos 3 países-sede com dados, imagens e números das figurinhas.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon">🥇</div>
+        <h3>Ídolos e lendas</h3>
+        <p>Seção especial com as cartas dos maiores ídolos históricos das seleções participantes.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon">🔄</div>
+        <h3>Checklist de troca</h3>
+        <p>Tabela pronta para imprimir e marcar as figurinhas que você tem, precisa e quer trocar.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon">🔍</div>
+        <h3>Índice por número</h3>
+        <p>Índice completo de 001 a 800+ para localizar qualquer figurinha pelo número do álbum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW DAS CARTAS -->
+<section class="preview-section">
+  <div class="container">
+    <div class="section-label">Amostra do conteúdo</div>
+    <h2 class="section-title">Veja como são as cartas</h2>
+    <p class="section-desc">Cada entrada traz número, nome, seleção, posição e raridade da figurinha.</p>
+
+    <div class="preview-mockup">
+      <div class="mockup-header">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+      </div>
+      <div class="mockup-body">
+        <div class="sticker-card">
+          <div class="sticker-header sticker-bg-verde">🇧🇷</div>
+          <div class="sticker-body">
+            <div class="sticker-num">#BRA-01</div>
+            <div class="sticker-name">Brasil — Escudo</div>
+            <div class="sticker-info">Grupo A • Seleção</div>
+            <span class="sticker-tag rara">✨ Brilhante</span>
+          </div>
+        </div>
+        <div class="sticker-card">
+          <div class="sticker-header sticker-bg-azul">🇦🇷</div>
+          <div class="sticker-body">
+            <div class="sticker-num">#ARG-10</div>
+            <div class="sticker-name">Argentina — Camisa 10</div>
+            <div class="sticker-info">Grupo B • Atacante</div>
+            <span class="sticker-tag lendaria">🔥 Lendária</span>
+          </div>
+        </div>
+        <div class="sticker-card">
+          <div class="sticker-header sticker-bg-amarelo">🏟️</div>
+          <div class="sticker-body">
+            <div class="sticker-num">#EST-03</div>
+            <div class="sticker-name">SoFi Stadium</div>
+            <div class="sticker-info">Los Angeles • EUA</div>
+            <span class="sticker-tag">Sede</span>
+          </div>
+        </div>
+        <div class="sticker-card">
+          <div class="sticker-header sticker-bg-vermelho">🇵🇹</div>
+          <div class="sticker-body">
+            <div class="sticker-num">#POR-07</div>
+            <div class="sticker-name">Portugal — Camisa 7</div>
+            <div class="sticker-info">Grupo D • Atacante</div>
+            <span class="sticker-tag rara">✨ Brilhante</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="paraquem-section">
+  <div class="container">
+    <div class="section-label">Para quem é este guia</div>
+    <h2 class="section-title">Perfeito para todo tipo de colecionador</h2>
+    <div class="perfis-grid">
+      <div class="perfil">
+        <span class="perfil-emoji">🧒</span>
+        <h4>Fã iniciante</h4>
+        <p>Descubra o que cada figurinha representa e complete o álbum sem se perder.</p>
+      </div>
+      <div class="perfil">
+        <span class="perfil-emoji">🔄</span>
+        <h4>Trocador ativo</h4>
+        <p>Negocie com mais segurança sabendo exatamente o valor e raridade de cada carta.</p>
+      </div>
+      <div class="perfil">
+        <span class="perfil-emoji">🏆</span>
+        <h4>Colecionador sério</h4>
+        <p>Tenha o controle total do seu álbum com o checklist organizado por seleção.</p>
+      </div>
+      <div class="perfil">
+        <span class="perfil-emoji">👨‍👩‍👧</span>
+        <h4>Família toda junta</h4>
+        <p>Compartilhe o guia e monte o álbum em família, cada um cuidando de uma seleção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA PRINCIPAL -->
+<section class="cta-section">
+  <div class="container">
+    <div class="section-label">Oferta de lançamento</div>
+    <h2 class="section-title">Garanta o seu agora</h2>
+    <p class="section-desc" style="margin: 0 auto; text-align:center;">Acesso imediato ao PDF após o pagamento. Funciona em celular, tablet e computador.</p>
+
+    <div style="display:flex; justify-content:center;">
+      <div class="price-box">
+        <div class="badge-desconto">70% OFF</div>
+        <div class="price-original">R$ 39,90</div>
+        <div class="price-main">R$12</div>
+        <div class="price-desc">pagamento único • acesso vitalício</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="#" class="cta-btn">⚽ Quero meu guia agora</a>
+      <div class="cta-garantia">
+        🔒 Pagamento seguro &nbsp;|&nbsp; 📩 Entrega imediata por e-mail
+      </div>
+    </div>
+
+    <div class="cta-extras">
+      <div class="extra-item"><span>✅</span> Garantia de 7 dias</div>
+      <div class="extra-item"><span>📱</span> Funciona em qualquer dispositivo</div>
+      <div class="extra-item"><span>🔄</span> Atualizações inclusas</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-label">Dúvidas frequentes</div>
+    <h2 class="section-title">Perguntas e respostas</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Como recebo o PDF depois do pagamento?</div>
+        <div class="faq-a"><div class="faq-a-inner">Após a confirmação do pagamento, você recebe o link de download diretamente no seu e-mail em até 5 minutos. O acesso é imediato e vitalício.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">O PDF funciona no celular?</div>
+        <div class="faq-a"><div class="faq-a-inner">Sim! O arquivo PDF pode ser aberto em qualquer smartphone, tablet ou computador. Você pode salvar no Google Drive, Dropbox ou direto no aparelho.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">As informações estão atualizadas com o álbum oficial?</div>
+        <div class="faq-a"><div class="faq-a-inner">Sim, o guia é baseado no álbum oficial Panini da Copa do Mundo 2026, com todos os números, seleções e informações dos jogadores confirmados.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">E se eu não ficar satisfeito?</div>
+        <div class="faq-a"><div class="faq-a-inner">Oferecemos garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, basta nos chamar e devolvemos 100% do seu dinheiro.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">O checklist pode ser impresso?</div>
+        <div class="faq-a"><div class="faq-a-inner">Com certeza! O checklist foi formatado especialmente para impressão em A4, facilitando o controle das figurinhas que você tem e das que ainda precisa.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Guia das Figurinhas Copa do Mundo · Todos os direitos reservados</p>
+  <p style="margin-top:8px;"><a href="#">Termos de uso</a> &nbsp;·&nbsp; <a href="#">Privacidade</a> &nbsp;·&nbsp; <a href="#">Suporte</a></p>
+  <p style="margin-top:12px; font-size:11px;">Este produto é um guia informativo independente. Não possui vínculo oficial com a FIFA, Panini ou qualquer entidade esportiva.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
